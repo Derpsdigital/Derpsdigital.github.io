@@ -3,7 +3,7 @@
 <HTML>
 	<head>
 		<title>DerpsDigitalForge</title>
-		<link rel="stylesheet" type="text/css" href="../styles/test.css">
+		<link rel="stylesheet" type="text/css" href="styles/test.css">
 		<script src="jquery-3.3.1.js"></script>
 
 		<meta charset="UTF-8">
@@ -42,38 +42,11 @@ function includeHTML() {
 </script>
 	</head>
 	<body>
-	<nav>
-    <ul class="nav navbar-nav" id = "nav">
-      <li class="active" ><a href="../index.html">Home</a></li>
-      <li><a href="../info/info.html" >Info</a>
-	  <ul>
-	  <li><a href="../info/members.html" >Members</a></li>
-	  <li><a href="../info/ordering.html" >Ordering</a></li>
-	  </ul>
-	  </li>
-      <li><a href="../media/media.html" >Media</a>
-	  <ul>
-	  <li><a href="../media/streams.html" >Streams</a></li>
-	  <li><a href="../media/videos.html" >Videos</a></li>
-	  </ul>
-	  </li>
-      <li><a href="../more/more.html" >More</a>
-	  <ul>
-	  <li><a href="../more/contact.html" >Contact</a></li>
-	  <li><a href="../more/forgroup.html" >For Group</a></li>
-	  <li><a href="../more/server.html" >Server</a></li>
-	  </ul>
-	  </li>
-    </ul>
-	</nav>
-			<header>
-			
-				<a href="index.html"><img src = "../images/logo.png" alt ="logo image" width = "75" height = "75"/></a>
-				
-				<h1 id = "maintitle">Welcome to</h1>
-				<h3 id = "mainsubtitle">DerpsDigitalForge</h3>
-				
-			</header>
+<div w3-include-html="header.html"></div> 
+
+<script>
+includeHTML();
+</script>
 
 	<div id = "wrap">
 			<div class = "body">

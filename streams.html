@@ -2,46 +2,51 @@
 
 <HTML>
 	<head>
-		<title>DerpsDigitalForge</title>
-		<link rel="stylesheet" type="text/css" href="../styles/test.css">
+				<title>DerpsDigitalForge</title>
+		<link rel="stylesheet" type="text/css" href="styles/test.css">
+		<script src="jquery-3.3.1.js"></script>
+
 		<meta charset="UTF-8">
 		<meta name="description" content="DerpsDigitalForge we are tech help for you. we make graphics, manage your server and sites, make you websites, and just simple tech help.">
 		<meta name="keywords" content="Derps,Digital,Forge,DerpsDigitalForge,Tech,I.T.,IT,Computer,Help,Streamers,Twitch,Website,Server Management,Help Desk,Graphics">
 		<meta name="author" content="PixelForge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
 	</head>
 	<body>
-	<nav>
-    <ul class="nav navbar-nav" id = "nav">
-      <li class="active" ><a href="../index.html">Home</a></li>
-      <li><a href="../info/info.html" >Info</a>
-	  <ul>
-	  <li><a href="../info/members.html" >Members</a></li>
-	  <li><a href="../info/ordering.html" >Ordering</a></li>
-	  </ul>
-	  </li>
-      <li><a href="../media/media.html" >Media</a>
-	  <ul>
-	  <li><a href="../media/streams.html" >Streams</a></li>
-	  <li><a href="../media/videos.html" >Videos</a></li>
-	  </ul>
-	  </li>
-      <li><a href="../more/more.html" >More</a>
-	  <ul>
-	  <li><a href="../more/contact.html" >Contact</a></li>
-	  <li><a href="../more/forgroup.html" >For Group</a></li>
-	  <li><a href="../more/server.html" >Server</a></li>
-	  </ul>
-	  </li>
-    </ul>
-	</nav>
-<header>
-<a href="../index.html"><img src = "../images/logo.png" alt ="logo image" width = "75" height = "75"/></a>
-<h1 id = "maintitle">Welcome to</h1>
-<h3 id = "mainsubtitle">DerpsDigitalForge</h3>
+<div w3-include-html="header.html"></div> 
 
-
-</header>
+<script>
+includeHTML();
+</script>
 <br>
 
 	<div class = "main">
@@ -49,16 +54,10 @@
 	
 	<embed src="https://player.twitch.tv/?channel=pixel_forge" frameborder="0"><a class = "twitch" href="https://www.twitch.tv/pixel_forge?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from Pixel_Forge on www.twitch.tv</a>
 	</div>
-	<footer>
-		<section id = "address">
-			<address>
-				Written by <a href="../info/members/pixelforge/pixelforge.html" title = "PixelForge">PixelForge</a>.<br> 
-				Visit us at:
-				<a href="../index.html">derpsdigitalforge.com</a><br>
-				Contact me at.<br>
-				<a href="mailto:pixelforge@derpsdigitalforge.com" title = "PixelForge">pixelforge@derpsdigitalforge.com</a>
-			</address>
-		</section>
-	</footer>
+<div w3-include-html="../Footer.html"></div> 
+
+<script>
+includeHTML();
+</script>
 	</body>
 </HTML>
